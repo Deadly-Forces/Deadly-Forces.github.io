@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { profile, Project } from "@/data/profile";
-import { ExternalLink, GitFork, ArrowUpRight } from "lucide-react";
+import { ExternalLink, GitFork, ArrowUpRight, FileText, BookOpen } from "lucide-react";
 
 export function Work() {
   const featuredProjects = [...profile.projects]
@@ -24,13 +24,13 @@ export function Work() {
           className="mb-14"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
-            03 / Work
+            03 / Work & Publications
           </span>
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-3xl">
-            Selected Engineering Projects
+            Selected Engineering & Research Projects
           </h2>
           <p className="mt-2 text-sm text-white/50">
-            Systems spanning full-stack application development, AI pipelines, and benchmarking.
+            Systems spanning full-stack application development, AI pipelines, benchmarking, and peer-reviewed research.
           </p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function Work() {
 }
 
 function FeaturedCard({ project, index }: { project: Project; index: number }) {
-  const isTodoStatus = project.status === "[TODO]";
+  const isPaper = Boolean(project.paperUrl);
 
   return (
     <motion.div
@@ -68,14 +68,20 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-[#FF9838]/40 hover:bg-white/[0.04]"
+      className={`group relative flex flex-col justify-between rounded-xl border p-6 transition ${
+        isPaper
+          ? "border-sky-500/30 bg-sky-950/[0.08] hover:border-sky-400/60 hover:bg-sky-950/[0.15]"
+          : "border-white/10 bg-white/[0.02] hover:border-[#FF9838]/40 hover:bg-white/[0.04]"
+      }`}
     >
       <div>
         {/* Status Badge & Meta */}
         <div className="flex items-center justify-between">
           <span
             className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${
-              project.status === "Shipped"
+              isPaper
+                ? "bg-sky-500/20 text-sky-300 border border-sky-500/40"
+                : project.status === "Shipped"
                 ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
                 : project.status === "In progress"
                 ? "bg-[#FF9838]/10 text-[#FF9838] border border-[#FF9838]/30"
@@ -84,10 +90,22 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
                 : "bg-white/5 text-white/50 border border-white/10"
             }`}
           >
-            {project.status}
+            {isPaper ? "Published Paper" : project.status}
           </span>
 
           <div className="flex items-center gap-2">
+            {project.paperUrl && (
+              <a
+                href={project.paperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${project.name} PDF Download`}
+                title="Download PDF"
+                className="text-sky-400/70 transition hover:text-sky-300"
+              >
+                <FileText className="h-4 w-4" />
+              </a>
+            )}
             {project.repoUrl && (
               <a
                 href={project.repoUrl}
@@ -104,8 +122,9 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${project.name} Live Demo`}
+                aria-label={`${project.name} External Link`}
                 className="text-white/40 transition hover:text-[#FF9838]"
+                title={isPaper ? "View Journal Page" : "Live Demo"}
               >
                 <ExternalLink className="h-4 w-4" />
               </a>
@@ -120,6 +139,13 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
         <p className="mt-2 text-xs leading-relaxed text-white/70">
           {project.oneLiner}
         </p>
+
+        {/* Citation / DOI note if available */}
+        {project.notes && (
+          <div className="mt-3 rounded border border-white/10 bg-black/30 px-2.5 py-1.5 font-mono text-[10px] text-white/60">
+            {project.notes}
+          </div>
+        )}
       </div>
 
       {/* Tech Stack Pills & Links Footer */}
@@ -136,12 +162,39 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
         </div>
 
         <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-white/40">
-          {project.repoUrl ? (
+          {isPaper ? (
+            <div className="flex items-center gap-3">
+              <a
+                href={project.liveUrl || project.paperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-sky-400 hover:text-sky-300 transition"
+              >
+                <BookOpen className="h-3 w-3" />
+                <span>Read Article</span>
+                <ArrowUpRight className="h-3 w-3" />
+              </a>
+              {project.paperUrl && (
+                <>
+                  <span className="text-white/20">•</span>
+                  <a
+                    href={project.paperUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-white/60 hover:text-white transition"
+                  >
+                    <FileText className="h-3 w-3" />
+                    <span>PDF</span>
+                  </a>
+                </>
+              )}
+            </div>
+          ) : project.repoUrl ? (
             <a
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[#FF9838]/80 hover:text-[#FF9838]"
+              className="flex items-center gap-1 text-[#FF9838]/80 hover:text-[#FF9838] transition"
             >
               <span>View Source</span>
               <ArrowUpRight className="h-3 w-3" />

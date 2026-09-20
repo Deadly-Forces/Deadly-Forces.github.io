@@ -72,6 +72,18 @@ export const profile: ProfileData = {
   },
   projects: [
     {
+      id: "adaptive-control-hri-paper",
+      name: "Adaptive Control Strategies for Human-Robot Interaction in Industrial Setting",
+      oneLiner:
+        "Peer-reviewed research paper published in IJIREEICE detailing an Adaptive Control Strategy (ACS) integrating reinforcement learning, fuzzy logic, and model predictive control (MPC) with multimodal sensory fusion achieving >96% interaction accuracy.",
+      stack: ["Robotics", "Adaptive Control", "Reinforcement Learning", "Fuzzy Logic", "MPC", "IJIREEICE"],
+      status: "Research",
+      featured: true,
+      paperUrl: "https://ijireeice.com/wp-content/uploads/2025/11/IJIREEICE.2025.131045-adaptive.pdf",
+      liveUrl: "https://ijireeice.com/papers/adaptive-control-strategies-for-human-robot-interaction-in-industrial-setting/",
+      notes: "IJIREEICE Vol. 13, Issue 10 • DOI: 10.17148/IJIREEICE.2025.131045",
+    },
+    {
       id: "ai-code-reviewer",
       name: "AI Code Reviewer",
       oneLiner:
