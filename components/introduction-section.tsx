@@ -132,12 +132,6 @@ export function IntroductionSection() {
                 </li>
               </ul>
             </div>
-
-            <div className="mt-6 border-t border-white/10 pt-4">
-              <span className="font-mono text-[11px] text-[#FF9838]">
-                Objective: Seeking Software Engineering & AI/ML Internships
-              </span>
-            </div>
           </motion.div>
 
           {/* Card 3: What service I can provide? */}
