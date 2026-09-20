@@ -16,7 +16,7 @@ export function TheGapSection() {
           className="mb-14 text-center max-w-3xl mx-auto"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
-            04 / The Gap
+            The Gap
           </span>
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-4xl">
             Bridging Model, Backend & User Experience

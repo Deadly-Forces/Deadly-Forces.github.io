@@ -24,7 +24,7 @@ export function Work() {
           className="mb-14"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
-            03 / Work & Publications
+            Work & Publications
           </span>
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-3xl">
             Selected Engineering & Research Projects

@@ -20,7 +20,7 @@ export function Availability({ onOpenBooking }: AvailabilityProps) {
           className="mb-12"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
-            04 / Availability
+            Availability
           </span>
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-3xl">
             Direct Discussion & Engagements

@@ -16,7 +16,7 @@ export function Snapshot() {
           className="mb-12"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
-            01 / Snapshot
+            Snapshot
           </span>
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-3xl">
             Foundation & Engineering Scope

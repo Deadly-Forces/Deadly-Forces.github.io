@@ -18,7 +18,7 @@ export function IntroductionSection() {
           className="mb-14"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
-            01 / Introduction
+            Introduction
           </span>
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-4xl">
             Who I Am, What I Build & Services Provided
@@ -152,7 +152,7 @@ export function IntroductionSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">01 / Full-Stack</span>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">Full-Stack</span>
                   <h4 className="text-sm font-medium text-white mb-2">Web Application Engineering</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
                     Building complete web products with Next.js, Node.js, TypeScript, Supabase, and clean responsive Tailwind CSS frontends.
@@ -160,7 +160,7 @@ export function IntroductionSection() {
                 </div>
 
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">02 / AI Tools</span>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">AI Tools</span>
                   <h4 className="text-sm font-medium text-white mb-2">AI Integrations & Reviewers</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
                     Integrating AI APIs, building code analysis and automated review tools, and developing intelligent OS assistant utilities.
@@ -168,7 +168,7 @@ export function IntroductionSection() {
                 </div>
 
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">03 / Vision & ML</span>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">Vision & ML</span>
                   <h4 className="text-sm font-medium text-white mb-2">Computer Vision Solutions</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
                     Feature extraction, optical flow pipelines, and classification systems using Python, MediaPipe, and machine learning models.
@@ -176,7 +176,7 @@ export function IntroductionSection() {
                 </div>
 
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">04 / Systems</span>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">Systems</span>
                   <h4 className="text-sm font-medium text-white mb-2">Automation & Security Scripts</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
                     Writing vulnerability scanning scripts, telemetry trackers, and Bash automation tools for Linux system maintenance.
