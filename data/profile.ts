@@ -207,10 +207,10 @@ export const profile: ProfileData = {
   ],
   availability: {
     timezone: "Asia/Kolkata (IST, UTC+5:30)",
-    days: "[TODO: e.g. Monday - Friday]",
-    hours: "[TODO: e.g. 10:00 AM - 6:00 PM IST]",
-    notes: "[TODO: Open for Summer/Fall 2025 internships & full-stack/AI roles]",
-    responseTime: "[TODO: e.g. Within 24 hours]",
+    days: "Monday - Friday",
+    hours: "10:00 AM - 6:00 PM IST",
+    notes: "Open for Software Engineering and AI/ML internships & technical collaborations",
+    responseTime: "Within 24 hours",
   },
   bookingUrl: "https://cal.com/nikunj-kaslikar-9kbylp",
   contact: {
