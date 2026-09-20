@@ -5,8 +5,12 @@ import { profile, Project } from "@/data/profile";
 import { ExternalLink, GitFork, ArrowUpRight } from "lucide-react";
 
 export function Work() {
-  const featuredProjects = profile.projects.filter((p) => p.featured);
-  const compactProjects = profile.projects.filter((p) => !p.featured);
+  const featuredProjects = [...profile.projects]
+    .filter((p) => p.featured)
+    .sort((a, b) => a.name.localeCompare(b.name));
+  const compactProjects = [...profile.projects]
+    .filter((p) => !p.featured)
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <section id="work" className="relative w-full border-b border-white/10 py-20 sm:py-24">

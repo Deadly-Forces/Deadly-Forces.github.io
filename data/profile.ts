@@ -72,17 +72,6 @@ export const profile: ProfileData = {
   },
   projects: [
     {
-      id: "micro-expression",
-      name: "Micro-Expression Detection System",
-      oneLiner:
-        "Computer vision classification system capturing subtle involuntary facial cues using MediaPipe, optical flow analysis, and SVM classifiers.",
-      stack: ["Python", "MediaPipe", "OpenCV", "Optical Flow", "SVM"],
-      status: "Shipped",
-      featured: true,
-      repoUrl: "https://github.com/Deadly-Forces/Micro-Expression-Detection-System",
-      liveUrl: undefined,
-    },
-    {
       id: "ai-code-reviewer",
       name: "AI Code Reviewer",
       oneLiner:
@@ -91,28 +80,6 @@ export const profile: ProfileData = {
       status: "Shipped",
       featured: true,
       repoUrl: "https://github.com/Deadly-Forces/Ai-Code-Reviewer",
-      liveUrl: undefined,
-    },
-    {
-      id: "ship-tracker",
-      name: "Ship-Tracker (Maritime Telemetry)",
-      oneLiner:
-        "Real-time vessel tracking and maritime telemetry dashboard streaming live boat locations, port coordinates, and navigation routes.",
-      stack: ["Python", "WebSockets", "Telemetry", "Data Streaming"],
-      status: "Shipped",
-      featured: true,
-      repoUrl: "https://github.com/Deadly-Forces/Ship-Tracker",
-      liveUrl: undefined,
-    },
-    {
-      id: "freshmart",
-      name: "FreshMart",
-      oneLiner:
-        "Full-stack online grocery platform featuring Supabase backend, role-based access control, product search, and responsive checkout.",
-      stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
-      status: "Shipped",
-      featured: true,
-      repoUrl: "https://github.com/Deadly-Forces/fresh-mart",
       liveUrl: undefined,
     },
     {
@@ -138,6 +105,50 @@ export const profile: ProfileData = {
       liveUrl: undefined,
     },
     {
+      id: "diskcleaner",
+      name: "DiskCleaner",
+      oneLiner:
+        "Linux system cache cleaner and disk optimization utility written in Bash for automated junk clearing and storage reclamation.",
+      stack: ["Bash", "Linux", "Shell Scripting", "System Administration"],
+      status: "Shipped",
+      featured: true,
+      repoUrl: "https://github.com/Deadly-Forces/DiskCleaner",
+      liveUrl: undefined,
+    },
+    {
+      id: "freshmart",
+      name: "FreshMart",
+      oneLiner:
+        "Full-stack online grocery platform featuring Supabase backend, role-based access control, product search, and responsive checkout.",
+      stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+      status: "Shipped",
+      featured: true,
+      repoUrl: "https://github.com/Deadly-Forces/fresh-mart",
+      liveUrl: undefined,
+    },
+    {
+      id: "micro-expression",
+      name: "Micro-Expression Detection System",
+      oneLiner:
+        "Computer vision classification system capturing subtle involuntary facial cues using MediaPipe, optical flow analysis, and SVM classifiers.",
+      stack: ["Python", "MediaPipe", "OpenCV", "Optical Flow", "SVM"],
+      status: "Shipped",
+      featured: true,
+      repoUrl: "https://github.com/Deadly-Forces/Micro-Expression-Detection-System",
+      liveUrl: undefined,
+    },
+    {
+      id: "ship-tracker",
+      name: "Ship-Tracker (Maritime Telemetry)",
+      oneLiner:
+        "Real-time vessel tracking and maritime telemetry dashboard streaming live boat locations, port coordinates, and navigation routes.",
+      stack: ["Python", "WebSockets", "Telemetry", "Data Streaming"],
+      status: "Shipped",
+      featured: true,
+      repoUrl: "https://github.com/Deadly-Forces/Ship-Tracker",
+      liveUrl: undefined,
+    },
+    {
       id: "trakerzz",
       name: "Trakerzz",
       oneLiner:
@@ -146,6 +157,17 @@ export const profile: ProfileData = {
       status: "Shipped",
       featured: true,
       repoUrl: "https://github.com/Deadly-Forces/Trakerzz",
+      liveUrl: undefined,
+    },
+    {
+      id: "upgrading-linux",
+      name: "Upgrading-Linux",
+      oneLiner:
+        "Interactive automation tool for identifying broken Linux packages, repairing file dependencies, and upgrading system software.",
+      stack: ["Shell", "Linux", "Package Management", "Automation"],
+      status: "Shipped",
+      featured: true,
+      repoUrl: "https://github.com/Deadly-Forces/Upgrading-Linux",
       liveUrl: undefined,
     },
     {
@@ -168,28 +190,6 @@ export const profile: ProfileData = {
       status: "Shipped",
       featured: true,
       repoUrl: "https://github.com/Deadly-Forces/Zenith-OS-Assistant-Smart-File-and-Browser-Manager",
-      liveUrl: undefined,
-    },
-    {
-      id: "diskcleaner",
-      name: "DiskCleaner",
-      oneLiner:
-        "Linux system cache cleaner and disk optimization utility written in Bash for automated junk clearing and storage reclamation.",
-      stack: ["Bash", "Linux", "Shell Scripting", "System Administration"],
-      status: "Shipped",
-      featured: true,
-      repoUrl: "https://github.com/Deadly-Forces/DiskCleaner",
-      liveUrl: undefined,
-    },
-    {
-      id: "upgrading-linux",
-      name: "Upgrading-Linux",
-      oneLiner:
-        "Interactive automation tool for identifying broken Linux packages, repairing file dependencies, and upgrading system software.",
-      stack: ["Shell", "Linux", "Package Management", "Automation"],
-      status: "Shipped",
-      featured: true,
-      repoUrl: "https://github.com/Deadly-Forces/Upgrading-Linux",
       liveUrl: undefined,
     },
   ],
