@@ -37,17 +37,19 @@ export function Work() {
           ))}
         </div>
 
-        {/* Compact Projects List */}
-        <div className="mt-16">
-          <h3 className="mb-6 font-mono text-xs uppercase tracking-wider text-white/50">
-            Additional Work & Research
-          </h3>
-          <div className="divide-y divide-white/10 border-y border-white/10">
-            {compactProjects.map((project, i) => (
-              <CompactRow key={project.id} project={project} index={i} />
-            ))}
+        {/* Compact Projects List (rendered only if compact projects exist) */}
+        {compactProjects.length > 0 && (
+          <div className="mt-16">
+            <h3 className="mb-6 font-mono text-xs uppercase tracking-wider text-white/50">
+              Additional Work & Research
+            </h3>
+            <div className="divide-y divide-white/10 border-y border-white/10">
+              {compactProjects.map((project, i) => (
+                <CompactRow key={project.id} project={project} index={i} />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
