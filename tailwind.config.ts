@@ -10,13 +10,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#000000",
-        foreground: "#FFF3DE",
+        background: "#0A0B0E",
+        foreground: "#F5EFEB",
+        studio: {
+          bg: "#0A0B0E",
+          panel: "#111318",
+          card: "#181A22",
+          elevated: "#20232D",
+          border: "rgba(245, 239, 235, 0.08)",
+          copper: "#E58C36",
+          bronze: "#B45309",
+          amber: "#D97706",
+          bone: "#F5EFEB",
+          muted: "#A8A29E",
+        },
         space: {
-          black: "#000000",
-          cream: "#FFF3DE",
-          orange: "#FF9838",
-          rust: "#8E3A0B",
+          black: "#0A0B0E",
+          cream: "#F5EFEB",
+          orange: "#E58C36",
+          rust: "#B45309",
         },
       },
       fontFamily: {

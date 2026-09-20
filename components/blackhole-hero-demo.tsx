@@ -125,13 +125,13 @@ export default function BlackHoleHeroSectionDemo() {
             <button
               onClick={handleStart}
               type="button"
-              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#FF9838] focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
+              className="rounded-full bg-[#F5EFEB] px-6 py-3 text-sm font-medium text-black transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#E58C36] focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
             >
               Let&apos;s start
             </button>
             <Link
               href="/home#book"
-              className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 transition hover:border-white/40 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FF9838] focus:ring-offset-2 focus:ring-offset-black"
+              className="rounded-full border border-white/20 px-6 py-3 text-sm text-[#F5EFEB]/90 transition hover:border-[#E58C36]/50 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#E58C36] focus:ring-offset-2 focus:ring-offset-black"
             >
               Book a call
             </Link>

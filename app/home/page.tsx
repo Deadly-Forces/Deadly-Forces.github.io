@@ -91,14 +91,18 @@ export default function HomePage() {
 
   return (
     <div
-      className={`min-h-screen bg-black text-[#FFF3DE] selection:bg-[#FF9838] selection:text-black transition-opacity ${
+      className={`min-h-screen bg-[#0A0B0E] text-[#F5EFEB] selection:bg-[#E58C36] selection:text-black transition-opacity ${
         reducedMotion ? "duration-200" : "duration-700 ease-out"
       } ${mounted ? "opacity-100" : "opacity-0"}`}
     >
-      {/* CSS-only space background with subtle radial orange warmth */}
+      {/* Studio ambient warmth & precision hairline grid */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(142,58,11,0.18),rgba(0,0,0,0))]"
+        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(229,140,54,0.12),rgba(10,11,14,0))]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-0 studio-grid opacity-30"
       />
 
       {/* Floating Pill Navigation */}
@@ -129,14 +133,14 @@ export default function HomePage() {
           </AnimatePresence>
 
           {/* Connected Pane Navigation Footer Bar */}
-          <div className="border-t border-white/10 bg-black/60 py-6 px-6 sm:px-8 backdrop-blur-md">
+          <div className="border-t border-white/10 bg-[#0A0B0E]/90 py-6 px-6 sm:px-8 backdrop-blur-md">
             <div className="mx-auto flex max-w-6xl items-center justify-between">
               <div>
                 {currentIndex > 0 ? (
                   <button
                     onClick={goToPrevPane}
                     type="button"
-                    className="flex items-center gap-2 text-xs font-mono text-white/60 hover:text-[#FF9838] transition cursor-pointer"
+                    className="flex items-center gap-2 text-xs font-mono text-[#A8A29E] hover:text-[#E58C36] transition cursor-pointer"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     <span>Previous: {PANES[currentIndex - 1].title}</span>
@@ -155,7 +159,7 @@ export default function HomePage() {
                     aria-label={`Go to ${pane.title}`}
                     className={`h-1.5 rounded-full transition-all cursor-pointer ${
                       idx === currentIndex
-                        ? "w-8 bg-[#FF9838]"
+                        ? "w-8 bg-[#E58C36]"
                         : "w-2 bg-white/20 hover:bg-white/40"
                     }`}
                   />
@@ -167,7 +171,7 @@ export default function HomePage() {
                   <button
                     onClick={goToNextPane}
                     type="button"
-                    className="flex items-center gap-2 text-xs font-mono text-white/60 hover:text-[#FF9838] transition cursor-pointer"
+                    className="flex items-center gap-2 text-xs font-mono text-[#A8A29E] hover:text-[#E58C36] transition cursor-pointer"
                   >
                     <span>Next: {PANES[currentIndex + 1].title}</span>
                     <ArrowRight className="h-4 w-4" />
@@ -176,7 +180,7 @@ export default function HomePage() {
                   <button
                     onClick={() => handleSelectTab("introduction")}
                     type="button"
-                    className="flex items-center gap-2 text-xs font-mono text-[#FF9838] hover:underline cursor-pointer"
+                    className="flex items-center gap-2 text-xs font-mono text-[#E58C36] hover:underline cursor-pointer"
                   >
                     <span>Back to Introduction</span>
                     <ArrowRight className="h-4 w-4" />

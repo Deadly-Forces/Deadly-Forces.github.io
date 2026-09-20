@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #000000;
-  --foreground: #FFF3DE;
+  --background: #0A0B0E;
+  --foreground: #F5EFEB;
 }
 
 html {
-  background-color: #000000;
-  color: #FFF3DE;
+  background-color: #0A0B0E;
+  color: #F5EFEB;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
 
 body {
-  background-color: #000000;
-  color: #FFF3DE;
+  background-color: #0A0B0E;
+  color: #F5EFEB;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -25,8 +25,16 @@ body {
 }
 
 ::selection {
-  background-color: #FF9838;
-  color: #000000;
+  background-color: #E58C36;
+  color: #0A0B0E;
+}
+
+/* Studio precision hairline grid */
+.studio-grid {
+  background-image: 
+    linear-gradient(rgba(245, 239, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 239, 235, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
 }
 
 /* Custom subtle scrollbar */
@@ -35,12 +43,12 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0A0B0E;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 243, 222, 0.15);
+  background: rgba(245, 239, 235, 0.12);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 152, 56, 0.4);
+  background: rgba(229, 140, 54, 0.5);
 }

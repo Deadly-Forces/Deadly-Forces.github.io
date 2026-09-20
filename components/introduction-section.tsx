@@ -17,14 +17,14 @@ export function IntroductionSection() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <span className="font-mono text-xs uppercase tracking-widest text-[#FF9838]">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#E58C36]">
             Introduction
           </span>
-          <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-white sm:text-4xl">
+          <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-[#F5EFEB] sm:text-4xl">
             Who I Am, What I Build & Services Provided
           </h2>
-          <p className="mt-3 text-sm text-white/60 max-w-2xl">
-            Synthesized from GitHub activity, open-source repositories, and technical engineering milestones.
+          <p className="mt-3 text-sm text-[#A8A29E] max-w-2xl">
+            Creative technology architecture, machine learning systems, and full-stack engineering milestones.
           </p>
         </motion.div>
 
@@ -36,35 +36,35 @@ export function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm"
+            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#E58C36]/30 transition-all"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="rounded-lg bg-[#FF9838]/10 p-2 text-[#FF9838]">
+                <div className="rounded-lg bg-[#E58C36]/10 p-2 text-[#E58C36]">
                   <User className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-light text-white">Who am I?</h3>
+                <h3 className="text-lg font-light text-[#F5EFEB]">Who am I?</h3>
               </div>
 
-              <p className="text-sm leading-relaxed text-[#FFF3DE]/90">
-                I am <strong className="text-white font-medium">{profile.name}</strong>, a full-stack engineer and Computer Science student specializing in AI/ML at <span className="text-white">SRM Institute of Science and Technology, Vadapalani Campus, Chennai</span> (Graduating 2027).
+              <p className="text-sm leading-relaxed text-[#F5EFEB]">
+                I am <strong className="text-white font-medium">{profile.name}</strong>, a software engineer and AI/ML researcher at <span className="text-white">SRM Institute of Science and Technology, Vadapalani Campus, Chennai</span> (Graduating 2027).
               </p>
 
-              <p className="mt-3 text-xs leading-relaxed text-white/70">
-                My engineering focus centers on building reliable end-to-end software applications and production-ready AI systems. I bridge the gap between complex machine learning models, resilient backend infrastructures, and creative frontend interfaces.
+              <p className="mt-3 text-xs leading-relaxed text-[#A8A29E]">
+                Published peer-reviewed author in robotic adaptive control (<em className="text-[#F5EFEB]">IJIREEICE</em>, Vol. 13) and builder of full-stack AI-integrated applications. I specialize in bridging the gap between mathematical models, robust low-latency backend pipelines, and kinetic user interfaces.
               </p>
 
-              <p className="mt-3 text-xs leading-relaxed text-white/70">
-                Grounded in computer systems, cybersecurity fundamentals, and open-source development, I actively design and ship tools ranging from full-stack platforms to inference benchmarking suites.
+              <p className="mt-3 text-xs leading-relaxed text-[#A8A29E]">
+                Operating at the intersection of systems engineering, cybersecurity tools, and computer vision, I design and ship production-grade architectures with rigorous craft.
               </p>
             </div>
 
-            <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-4 font-mono text-xs text-white/60">
+            <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-4 font-mono text-xs text-[#A8A29E]">
               <a
                 href={profile.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-[#FF9838] transition"
+                className="flex items-center gap-1.5 hover:text-[#E58C36] transition"
               >
                 <GitFork className="h-3.5 w-3.5" />
                 <span>GitHub @Deadly-Forces</span>
@@ -74,7 +74,7 @@ export function IntroductionSection() {
                 href={profile.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-[#FF9838] transition"
+                className="flex items-center gap-1.5 hover:text-[#E58C36] transition"
               >
                 <Linkedin className="h-3.5 w-3.5" />
                 <span>LinkedIn</span>
@@ -89,45 +89,45 @@ export function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm"
+            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#E58C36]/30 transition-all"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="rounded-lg bg-[#FF9838]/10 p-2 text-[#FF9838]">
+                <div className="rounded-lg bg-[#E58C36]/10 p-2 text-[#E58C36]">
                   <Cpu className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-light text-white">What I can do?</h3>
+                <h3 className="text-lg font-light text-[#F5EFEB]">What I can do?</h3>
               </div>
 
-              <ul className="space-y-3 text-xs leading-relaxed text-[#FFF3DE]/90">
+              <ul className="space-y-3 text-xs leading-relaxed text-[#F5EFEB]/90">
                 <li className="flex items-start gap-2.5">
-                  <span className="text-[#FF9838] font-mono mt-0.5">•</span>
+                  <span className="text-[#E58C36] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Architect Scalable Full-Stack Products:</strong> Capable of taking product concepts from relational database architecture (PostgreSQL, Supabase) and backend APIs (Node.js, REST, WebSockets) to high-performance, accessible Next.js interfaces.
+                    <strong className="text-white font-medium">Architect Scalable Full-Stack Products:</strong> Relational schema design (PostgreSQL, Supabase), real-time streaming APIs (Node.js, REST, WebSockets), and high-performance, accessible Next.js interfaces.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-[#FF9838] font-mono mt-0.5">•</span>
+                  <span className="text-[#E58C36] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Build AI-Powered Tools & Developer Automations:</strong> Capable of embedding generative AI workflows, building automated code analysis/review engines, and developing custom intelligent utilities that streamline development pipelines.
+                    <strong className="text-white font-medium">Engineer AI Tools & Developer Automations:</strong> Generative AI workflows, automated pull request code analysis engines, and smart OS desktop assistants.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-[#FF9838] font-mono mt-0.5">•</span>
+                  <span className="text-[#E58C36] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Design Real-Time Computer Vision Pipelines:</strong> Capable of engineering low-latency perceptual systems—processing live video streams, calculating optical flow, and deploying machine learning classifiers for real-world feature extraction.
+                    <strong className="text-white font-medium">Design Real-Time Computer Vision Pipelines:</strong> Low-latency perceptual systems—live video stream processing, optical flow calculations, and micro-expression classifiers.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-[#FF9838] font-mono mt-0.5">•</span>
+                  <span className="text-[#E58C36] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Engineer Benchmarking & Performance Test Suites:</strong> Capable of profiling deep learning model inference, measuring latency distributions across hardware targets, and optimizing runtime execution throughput.
+                    <strong className="text-white font-medium">Engineer Benchmarking & Inference Frameworks:</strong> Profiling deep learning runtime latency distributions, hardware throughput with OpenVINO, and inference efficiency.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-[#FF9838] font-mono mt-0.5">•</span>
+                  <span className="text-[#E58C36] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Implement Systems Automation & Security Utilities:</strong> Capable of building custom network vulnerability discovery scanners, real-time telemetry streaming platforms, and low-level Linux Bash maintenance scripts.
+                    <strong className="text-white font-medium">Implement Systems Security & Automation:</strong> Network vulnerability discovery scanners, vessel telemetry tracking platforms, and Linux package automation.
                   </span>
                 </li>
               </ul>
@@ -140,45 +140,45 @@ export function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm lg:col-span-2"
+            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] lg:col-span-2"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="rounded-lg bg-[#FF9838]/10 p-2 text-[#FF9838]">
+                <div className="rounded-lg bg-[#E58C36]/10 p-2 text-[#E58C36]">
                   <Briefcase className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-light text-white">What service I can provide?</h3>
+                <h3 className="text-lg font-light text-[#F5EFEB]">What service I can provide?</h3>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">Full-Stack</span>
-                  <h4 className="text-sm font-medium text-white mb-2">Web Application Engineering</h4>
-                  <p className="text-xs text-white/60 leading-relaxed">
-                    Building complete web products with Next.js, Node.js, TypeScript, Supabase, and clean responsive Tailwind CSS frontends.
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                  <span className="font-mono text-[11px] text-[#E58C36] block mb-1">Full-Stack</span>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">Web Application Engineering</h4>
+                  <p className="text-xs text-[#A8A29E] leading-relaxed">
+                    Building complete web products with Next.js, Node.js, TypeScript, Supabase, and responsive Tailwind CSS frontends.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">AI Tools</span>
-                  <h4 className="text-sm font-medium text-white mb-2">AI Integrations & Reviewers</h4>
-                  <p className="text-xs text-white/60 leading-relaxed">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                  <span className="font-mono text-[11px] text-[#E58C36] block mb-1">AI Tools</span>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">AI Integrations & Reviewers</h4>
+                  <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Integrating AI APIs, building code analysis and automated review tools, and developing intelligent OS assistant utilities.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">Vision & ML</span>
-                  <h4 className="text-sm font-medium text-white mb-2">Computer Vision Solutions</h4>
-                  <p className="text-xs text-white/60 leading-relaxed">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                  <span className="font-mono text-[11px] text-[#E58C36] block mb-1">Vision & ML</span>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">Computer Vision Solutions</h4>
+                  <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Feature extraction, optical flow pipelines, and classification systems using Python, MediaPipe, and machine learning models.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">Systems</span>
-                  <h4 className="text-sm font-medium text-white mb-2">Automation & Security Scripts</h4>
-                  <p className="text-xs text-white/60 leading-relaxed">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                  <span className="font-mono text-[11px] text-[#E58C36] block mb-1">Systems</span>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">Automation & Security Scripts</h4>
+                  <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Writing vulnerability scanning scripts, telemetry trackers, and Bash automation tools for Linux system maintenance.
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export function IntroductionSection() {
           </motion.div>
         </div>
 
-        {/* Section 4: What skills I have? (with 3D Rotatory Tag Sphere) */}
+        {/* Section 4: What skills I have? (AI Cartoon Character Holding 3D Rotary Tag Sphere) */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -196,84 +196,80 @@ export function IntroductionSection() {
           className="mt-14"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="rounded-lg bg-[#FF9838]/10 p-2 text-[#FF9838]">
+            <div className="rounded-lg bg-[#E58C36]/10 p-2 text-[#E58C36]">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="text-xl font-light text-white">What skills I have?</h3>
-              <p className="font-mono text-xs text-white/50">
-                Rotary 3D tag sphere · Drag to explore full stack & systems skills
+              <h3 className="text-xl font-light text-[#F5EFEB]">What skills I have?</h3>
+              <p className="font-mono text-xs text-[#A8A29E]">
+                3D Rotary Skill Sphere held by AI Developer · Drag to spin in 3D
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* 3D Rotary Sphere */}
+            {/* 3D Rotary Sphere with AI Character */}
             <div className="lg:col-span-7">
               <SkillsTagSphere />
             </div>
 
             {/* Structured Categorized Skill Pills */}
             <div className="lg:col-span-5 space-y-4">
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
+              <div className="rounded-xl border border-white/10 bg-[#111318]/90 p-4">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-[#E58C36] block mb-2">
                   Frontend & Frameworks
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {["Next.js", "React.js", "Node.js", "Express.js", "Tailwind CSS v4", "HTML5", "CSS3", "REST APIs"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
+                    <span key={s} className="rounded bg-white/5 border border-white/5 px-2 py-0.5 font-mono text-xs text-[#F5EFEB]">
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
+              <div className="rounded-xl border border-white/10 bg-[#111318]/90 p-4">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-[#E58C36] block mb-2">
                   Languages & Scripting
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {["TypeScript", "JavaScript", "Python", "BASH Scripting", "Shell Scripting", "PowerShell"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
+                    <span key={s} className="rounded bg-white/5 border border-white/5 px-2 py-0.5 font-mono text-xs text-[#F5EFEB]">
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
-                  Databases, Linux & Systems
+              <div className="rounded-xl border border-white/10 bg-[#111318]/90 p-4">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-[#E58C36] block mb-2">
+                  AI, Systems & Infrastructure
                 </span>
                 <div className="flex flex-wrap gap-1.5">
-                  {["PostgreSQL", "MongoDB", "MySQL", "DBMS", "Linux System Administration", "GNU/Linux", "Ubuntu", "Operating Systems", "Git & GitHub"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
+                  {[
+                    "Machine Learning",
+                    "OpenVINO",
+                    "AI Benchmarking",
+                    "Vulnerability Scanning",
+                    "Linux Administration",
+                    "GNU/Linux",
+                    "Ubuntu",
+                    "Git & GitHub",
+                  ].map((s) => (
+                    <span key={s} className="rounded bg-white/5 border border-white/5 px-2 py-0.5 font-mono text-xs text-[#F5EFEB]">
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
-                  AI, Machine Learning & Security
+              <div className="rounded-xl border border-white/10 bg-[#111318]/90 p-4">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-[#E58C36] block mb-2">
+                  Databases & Architecture
                 </span>
                 <div className="flex flex-wrap gap-1.5">
-                  {["Machine Learning Algorithms", "OpenVINO", "AI Workload Benchmarking", "Vulnerability Scanning"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
-                  Domain, Strategy & Interpersonal
-                </span>
-                <div className="flex flex-wrap gap-1.5">
-                  {["Leadership Development", "Trading Strategies", "Financial Analysis", "Marketing Strategy", "Copywriting", "Customer Service", "Computer Engineering"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
+                  {["PostgreSQL", "MongoDB", "MySQL", "DBMS", "Computer Science", "Computer Engineering"].map((s) => (
+                    <span key={s} className="rounded bg-white/5 border border-white/5 px-2 py-0.5 font-mono text-xs text-[#F5EFEB]">
                       {s}
                     </span>
                   ))}

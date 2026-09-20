@@ -59,7 +59,9 @@ export function SkillsTagSphere() {
     let width = (canvas.width = canvas.offsetWidth * window.devicePixelRatio);
     let height = (canvas.height = canvas.offsetHeight * window.devicePixelRatio);
 
-    const radius = Math.min(width, height) * 0.38;
+    // Position sphere origin right above and between the character's cupped hands
+    const sphereRadius = Math.min(width, height) * 0.32;
+    const centerYOffset = height * 0.52;
 
     // Distribute skills evenly on a 3D sphere using Fibonacci sphere algorithm
     const count = SKILLS.length;
@@ -79,9 +81,9 @@ export function SkillsTagSphere() {
       };
     });
 
-    let rotX = 0.003;
-    let rotY = 0.004;
-    let angleX = 0;
+    let rotX = 0.002;
+    let rotY = 0.0035;
+    let angleX = 0.15;
     let angleY = 0;
 
     let isDragging = false;
@@ -98,10 +100,10 @@ export function SkillsTagSphere() {
       if (isDragging) {
         const deltaX = e.clientX - lastMouseX;
         const deltaY = e.clientY - lastMouseY;
-        angleY += deltaX * 0.005;
-        angleX -= deltaY * 0.005;
-        rotY = deltaX * 0.002;
-        rotX = -deltaY * 0.002;
+        angleY += deltaX * 0.006;
+        angleX -= deltaY * 0.006;
+        rotY = deltaX * 0.0025;
+        rotX = -deltaY * 0.0025;
         lastMouseX = e.clientX;
         lastMouseY = e.clientY;
       }
@@ -124,10 +126,10 @@ export function SkillsTagSphere() {
       if (isDragging && e.touches.length === 1) {
         const deltaX = e.touches[0].clientX - lastMouseX;
         const deltaY = e.touches[0].clientY - lastMouseY;
-        angleY += deltaX * 0.005;
-        angleX -= deltaY * 0.005;
-        rotY = deltaX * 0.002;
-        rotX = -deltaY * 0.002;
+        angleY += deltaX * 0.006;
+        angleX -= deltaY * 0.006;
+        rotY = deltaX * 0.0025;
+        rotX = -deltaY * 0.0025;
         lastMouseX = e.touches[0].clientX;
         lastMouseY = e.touches[0].clientY;
       }
@@ -152,10 +154,10 @@ export function SkillsTagSphere() {
 
       ctx.clearRect(0, 0, width, height);
 
-      // Dampen rotation speed back to base drift
+      // Dampen rotation speed back to gentle drift
       if (!isDragging) {
-        rotX = rotX * 0.96 + 0.0015 * 0.04;
-        rotY = rotY * 0.96 + 0.0035 * 0.04;
+        rotX = rotX * 0.96 + 0.001 * 0.04;
+        rotY = rotY * 0.96 + 0.003 * 0.04;
         angleX += rotX;
         angleY += rotY;
       }
@@ -178,8 +180,8 @@ export function SkillsTagSphere() {
         // Perspective scale: d / (d + z)
         const d = 2.4;
         const scale = d / (d + z2);
-        const screenX = width / 2 + x1 * radius * scale;
-        const screenY = height / 2 + y1 * radius * scale;
+        const screenX = width / 2 + x1 * sphereRadius * scale;
+        const screenY = centerYOffset + y1 * sphereRadius * scale;
         const alpha = Math.max(0.12, (z2 + 1) / 2);
 
         return {
@@ -193,23 +195,28 @@ export function SkillsTagSphere() {
         };
       });
 
-      // Sort by Z depth (painter's algorithm: draw furthest first)
+      // Sort by Z depth (draw furthest first)
       projected.sort((a, b) => a.z - b.z);
 
-      // Render tags
+      // Render tags with warm studio amber & bone palette (no purple/blue)
       projected.forEach((p) => {
-        const fontSize = Math.max(10, Math.min(22, 13 * p.scale * (window.devicePixelRatio > 1 ? 1.4 : 1)));
-        ctx.font = `500 ${fontSize}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
+        const fontSize = Math.max(10, Math.min(20, 12.5 * p.scale * (window.devicePixelRatio > 1 ? 1.35 : 1)));
+        ctx.font = `600 ${fontSize}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
 
-        // Color coding with blackhole warm highlight on front tags
-        if (p.z > 0.3) {
-          ctx.fillStyle = `rgba(255, 152, 56, ${p.alpha})`; // Warm Orange Accent for front tags
-        } else if (p.z > -0.1) {
-          ctx.fillStyle = `rgba(255, 243, 222, ${p.alpha * 0.9})`; // Cream for mid tags
+        // Studio warm lighting: front tags glow copper/amber, middle are champagne bone, back are muted stone
+        if (p.z > 0.35) {
+          ctx.fillStyle = `rgba(229, 140, 54, ${p.alpha})`; // Radiant Amber-Copper
+          ctx.shadowColor = "rgba(229, 140, 54, 0.6)";
+          ctx.shadowBlur = 8 * p.scale;
+        } else if (p.z > -0.15) {
+          ctx.fillStyle = `rgba(245, 239, 235, ${p.alpha * 0.95})`; // Champagne Bone
+          ctx.shadowColor = "rgba(245, 239, 235, 0.3)";
+          ctx.shadowBlur = 4 * p.scale;
         } else {
-          ctx.fillStyle = `rgba(255, 243, 222, ${p.alpha * 0.4})`; // Dim for rear tags
+          ctx.fillStyle = `rgba(168, 162, 158, ${p.alpha * 0.45})`; // Muted Studio Stone
+          ctx.shadowBlur = 0;
         }
 
         ctx.fillText(p.name, p.x, p.y);
@@ -242,24 +249,50 @@ export function SkillsTagSphere() {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center cursor-grab active:cursor-grabbing select-none w-full h-[380px] sm:h-[460px] rounded-2xl border border-white/10 bg-white/[0.02] p-4 backdrop-blur-sm overflow-hidden"
+      className="group relative flex flex-col items-center justify-center cursor-grab active:cursor-grabbing select-none w-full h-[460px] sm:h-[540px] rounded-2xl border border-white/10 bg-[#0D0F14] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
     >
-      <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
-        <span className="h-2 w-2 rounded-full bg-[#FF9838] animate-pulse" />
-        <span className="font-mono text-[10px] uppercase tracking-widest text-white/50">
-          Interactive 3D Skill Sphere · Drag to Rotate
+      {/* AI Cartoon Developer Portrait holding the sphere */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/ai-developer-holding-globe.png"
+        alt="AI Developer Character holding the 3D Rotary Skills Globe"
+        className="absolute inset-0 w-full h-full object-cover object-top opacity-75 group-hover:opacity-85 transition-opacity duration-700 pointer-events-none select-none scale-105"
+      />
+
+      {/* Studio lighting vignette & dark depth mask */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B0E] via-transparent to-[#0A0B0E]/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_52%,rgba(229,140,54,0.18)_0%,transparent_60%)] pointer-events-none" />
+
+      {/* Glowing energy halo between his cupped hands */}
+      <div className="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-tr from-[#E58C36]/25 to-transparent blur-3xl pointer-events-none animate-pulse" />
+
+      {/* Top telemetry badge */}
+      <div className="absolute top-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
+        <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-3 py-1 backdrop-blur-md">
+          <span className="h-2 w-2 rounded-full bg-[#E58C36] animate-pulse" />
+          <span className="font-mono text-[10px] uppercase tracking-wider text-[#F5EFEB]">
+            AI Developer · Rotary Skill Sphere
+          </span>
+        </div>
+        <span className="font-mono text-[10px] text-[#A8A29E] hidden sm:inline-block bg-black/50 px-2.5 py-1 rounded-full border border-white/5">
+          Drag to spin in 3D
         </span>
       </div>
 
+      {/* 3D Canvas rendering the rotary skill globe between his hands */}
       <canvas
         ref={canvasRef}
-        className="h-full w-full object-contain"
-        aria-label="Interactive 3D Rotary Skill Sphere"
+        className="relative z-10 h-full w-full object-contain"
+        aria-label="Interactive 3D Rotary Skill Sphere held by AI Developer"
       />
 
-      <div className="absolute bottom-3 text-center pointer-events-none">
-        <span className="font-mono text-[10px] text-white/30">
-          Core Languages · AI Systems · Backend Architecture · Cloud
+      {/* Bottom studio status tag */}
+      <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
+        <span className="font-mono text-[10px] text-[#A8A29E]/80 bg-black/60 px-3 py-1 rounded-full border border-white/10 backdrop-blur-sm">
+          34 Verified Technical Competencies
+        </span>
+        <span className="font-mono text-[10px] text-[#E58C36] bg-black/60 px-2.5 py-1 rounded-full border border-[#E58C36]/20 backdrop-blur-sm">
+          Active Hologram
         </span>
       </div>
     </div>
