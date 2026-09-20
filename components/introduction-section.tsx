@@ -103,31 +103,31 @@ export function IntroductionSection() {
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Full-Stack Web Development:</strong> Engineering scalable full-stack web applications with Next.js, Node.js, TypeScript, Tailwind CSS, Supabase, and PostgreSQL (e.g. FreshMart).
+                    <strong className="text-white font-medium">Architect Scalable Full-Stack Products:</strong> Capable of taking product concepts from relational database architecture (PostgreSQL, Supabase) and backend APIs (Node.js, REST, WebSockets) to high-performance, accessible Next.js interfaces.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">AI & Code Review Automation:</strong> Developing intelligent developer tools and automated code review engines in TypeScript (e.g. Ai-Code-Reviewer).
+                    <strong className="text-white font-medium">Build AI-Powered Tools & Developer Automations:</strong> Capable of embedding generative AI workflows, building automated code analysis/review engines, and developing custom intelligent utilities that streamline development pipelines.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Computer Vision & Expression Detection:</strong> Implementing facial micro-expression classification systems using MediaPipe, optical flow, and SVM classifiers.
+                    <strong className="text-white font-medium">Design Real-Time Computer Vision Pipelines:</strong> Capable of engineering low-latency perceptual systems—processing live video streams, calculating optical flow, and deploying machine learning classifiers for real-world feature extraction.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">AI Workload Benchmarking:</strong> Building Python benchmark frameworks to measure model inference performance, execution times, and throughput.
+                    <strong className="text-white font-medium">Engineer Benchmarking & Performance Test Suites:</strong> Capable of profiling deep learning model inference, measuring latency distributions across hardware targets, and optimizing runtime execution throughput.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Systems, Networking & Automation:</strong> Developing vulnerability scanners, real-time vessel telemetry trackers (Ship-Tracker), and Linux bash automation scripts (DiskCleaner).
+                    <strong className="text-white font-medium">Implement Systems Automation & Security Utilities:</strong> Capable of building custom network vulnerability discovery scanners, real-time telemetry streaming platforms, and low-level Linux Bash maintenance scripts.
                   </span>
                 </li>
               </ul>

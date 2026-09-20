@@ -60,11 +60,11 @@ export const profile: ProfileData = {
     whatIAm:
       "CSE (AI/ML) student at SRM IST Chennai, graduating 2027. Building robust full-stack applications with integrated, production-ready AI workflows.",
     capabilities: [
-      "Scalable full-stack web applications with Next.js, Node.js, TypeScript, Tailwind CSS, Supabase, and PostgreSQL (e.g. FreshMart).",
-      "Automated code review engines and developer tools using TypeScript and AI models (e.g. Ai-Code-Reviewer).",
-      "Computer vision systems for facial micro-expression detection using MediaPipe, optical flow, and SVM.",
-      "Python benchmarking suites profiling machine learning inference workloads, latency, and throughput.",
-      "Network vulnerability scanners, vessel telemetry tracking (Ship-Tracker), and Linux Bash automation utilities (DiskCleaner).",
+      "Architect scalable full-stack products from database schemas (PostgreSQL/Supabase) and backend APIs (Node.js/WebSockets) to responsive Next.js web applications.",
+      "Build custom AI tools, automated code reviewers, and intelligent developer workflows that accelerate productivity.",
+      "Design real-time computer vision pipelines for live video analysis, optical flow tracking, and perceptual classification.",
+      "Engineer deep learning benchmarking suites profiling hardware inference latency distributions and compute throughput.",
+      "Implement systems automation utilities, real-time telemetry streaming platforms, and network vulnerability discovery scanners.",
     ],
     purpose: "[TODO: one sentence from me]",
     gapCovered:
