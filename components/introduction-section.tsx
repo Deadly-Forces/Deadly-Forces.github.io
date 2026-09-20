@@ -214,40 +214,66 @@ export function IntroductionSection() {
             </div>
 
             {/* Structured Categorized Skill Pills */}
-            <div className="lg:col-span-5 space-y-5">
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
+            <div className="lg:col-span-5 space-y-4">
+              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
-                  Languages
+                  Frontend & Frameworks
                 </span>
                 <div className="flex flex-wrap gap-1.5">
-                  {["TypeScript", "JavaScript", "Python", "C++", "Java", "SQL", "Bash", "HTML5/CSS3"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2.5 py-1 font-mono text-xs text-white/80">
+                  {["Next.js", "React.js", "Node.js", "Express.js", "Tailwind CSS v4", "HTML5", "CSS3", "REST APIs"].map((s) => (
+                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
+              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
-                  Frontend & Backend Frameworks
+                  Languages & Scripting
                 </span>
                 <div className="flex flex-wrap gap-1.5">
-                  {["Next.js (App Router)", "React", "Node.js", "Tailwind CSS", "Supabase", "PostgreSQL", "MySQL", "WebSockets"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2.5 py-1 font-mono text-xs text-white/80">
+                  {["TypeScript", "JavaScript", "Python", "BASH Scripting", "Shell Scripting", "PowerShell"].map((s) => (
+                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
+              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
-                  AI / ML & Systems Tools
+                  Databases, Linux & Systems
                 </span>
                 <div className="flex flex-wrap gap-1.5">
-                  {["PyTorch", "OpenVINO", "MediaPipe", "OpenCV", "LLM APIs & RAG", "MCP Servers", "Linux", "Git", "Docker"].map((s) => (
-                    <span key={s} className="rounded bg-white/5 px-2.5 py-1 font-mono text-xs text-white/80">
+                  {["PostgreSQL", "MongoDB", "MySQL", "DBMS", "Linux System Administration", "GNU/Linux", "Ubuntu", "Operating Systems", "Git & GitHub"].map((s) => (
+                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
+                  AI, Machine Learning & Security
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Machine Learning Algorithms", "OpenVINO", "AI Workload Benchmarking", "Vulnerability Scanning"].map((s) => (
+                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-[#FF9838] block mb-2">
+                  Domain, Strategy & Interpersonal
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Leadership Development", "Trading Strategies", "Financial Analysis", "Marketing Strategy", "Copywriting", "Customer Service", "Computer Engineering"].map((s) => (
+                    <span key={s} className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-white/80">
                       {s}
                     </span>
                   ))}
