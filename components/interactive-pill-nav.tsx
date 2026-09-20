@@ -3,23 +3,23 @@
 import { motion } from "framer-motion";
 import { Sun } from "lucide-react";
 
-export type NavTab = "introduction" | "work" | "gap";
+export type NavTab = "introduction" | "work" | "gap" | "book";
 
 interface InteractivePillNavProps {
   activeTab: NavTab;
   onSelectTab: (tab: NavTab) => void;
-  onOpenBooking: () => void;
+  onOpenBooking?: () => void;
 }
 
 export function InteractivePillNav({
   activeTab,
   onSelectTab,
-  onOpenBooking,
 }: InteractivePillNavProps) {
   const tabs: { id: NavTab; label: string }[] = [
     { id: "introduction", label: "Introduction" },
     { id: "work", label: "Work" },
     { id: "gap", label: "The gap" },
+    { id: "book", label: "Book a call" },
   ];
 
   return (
@@ -36,7 +36,7 @@ export function InteractivePillNav({
               key={tab.id}
               onClick={() => onSelectTab(tab.id)}
               type="button"
-              className={`relative rounded-full px-4 py-2 text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
+              className={`relative rounded-full px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
                 isActive
                   ? "text-white"
                   : "text-white/60 hover:text-white"
@@ -49,22 +49,21 @@ export function InteractivePillNav({
                   transition={{ type: "spring", stiffness: 450, damping: 35 }}
                 />
               )}
-              <span className="relative z-10">{tab.label}</span>
+              <span className="relative z-10 flex items-center gap-1.5">
+                {tab.id === "book" && (
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FF9838] opacity-75" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#FF9838]" />
+                  </span>
+                )}
+                <span>{tab.label}</span>
+              </span>
             </button>
           );
         })}
 
-        {/* Book a call pill button (exact white pill style from screenshot) */}
-        <button
-          onClick={onOpenBooking}
-          type="button"
-          className="relative ml-1 rounded-full bg-white px-4 py-2 text-xs sm:text-sm font-medium text-black transition-all hover:bg-[#FFF3DE] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] focus:outline-none focus:ring-2 focus:ring-[#FF9838] cursor-pointer"
-        >
-          Book a call
-        </button>
-
         {/* Vertical divider */}
-        <div className="h-4 w-[1px] bg-white/20 mx-1.5 hidden sm:block" />
+        <div className="h-4 w-[1px] bg-white/20 mx-1 hidden sm:block" />
 
         {/* Accent / theme indicator from screenshot */}
         <div className="p-2 text-white/50 hover:text-[#FF9838] transition hidden sm:flex items-center justify-center">

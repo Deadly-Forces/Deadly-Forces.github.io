@@ -15,6 +15,7 @@ const PANES: { id: NavTab; title: string; subtitle: string }[] = [
   { id: "introduction", title: "Introduction", subtitle: "Who I Am, What I Build & Services" },
   { id: "work", title: "Work", subtitle: "Selected Engineering Repositories & Systems" },
   { id: "gap", title: "The gap", subtitle: "Bridging Model, Backend & User Experience" },
+  { id: "book", title: "Book a call", subtitle: "Direct Discussion & Engagements" },
 ];
 
 export default function HomePage() {
@@ -36,7 +37,7 @@ export default function HomePage() {
       if (hash === "work" || hash === "gap" || hash === "book") {
         if (hash === "gap") setActiveTab("gap");
         else if (hash === "work") setActiveTab("work");
-        else if (hash === "book") setIsBookingOpen(true);
+        else if (hash === "book") setActiveTab("book");
       }
     }
 
@@ -100,7 +101,7 @@ export default function HomePage() {
         className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(142,58,11,0.18),rgba(0,0,0,0))]"
       />
 
-      {/* Floating Pill Navigation matching screenshot */}
+      {/* Floating Pill Navigation */}
       <InteractivePillNav
         activeTab={activeTab}
         onSelectTab={handleSelectTab}
@@ -123,6 +124,7 @@ export default function HomePage() {
               {activeTab === "introduction" && <IntroductionSection />}
               {activeTab === "work" && <Work />}
               {activeTab === "gap" && <TheGapSection />}
+              {activeTab === "book" && <Availability onOpenBooking={() => setIsBookingOpen(true)} />}
             </motion.div>
           </AnimatePresence>
 
@@ -172,27 +174,23 @@ export default function HomePage() {
                   </button>
                 ) : (
                   <button
-                    onClick={() => setIsBookingOpen(true)}
+                    onClick={() => handleSelectTab("introduction")}
                     type="button"
                     className="flex items-center gap-2 text-xs font-mono text-[#FF9838] hover:underline cursor-pointer"
                   >
-                    <span>Book a discussion</span>
+                    <span>Back to Introduction</span>
                     <ArrowRight className="h-4 w-4" />
                   </button>
                 )}
               </div>
             </div>
           </div>
-
-          {/* Availability & Booking section */}
-          <Availability onOpenBooking={() => setIsBookingOpen(true)} />
         </main>
 
-        {/* Global Footer */}
         <Footer />
       </div>
 
-      {/* Global Booking Modal */}
+      {/* Cal.com booking modal */}
       <BookingModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
