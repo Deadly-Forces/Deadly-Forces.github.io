@@ -103,25 +103,31 @@ export function IntroductionSection() {
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Full-Stack Application Engineering:</strong> Design and build complete web applications with Next.js App Router, TypeScript, Tailwind CSS, Supabase, and PostgreSQL.
+                    <strong className="text-white font-medium">Full-Stack Web Development:</strong> Engineering scalable full-stack web applications with Next.js, Node.js, TypeScript, Tailwind CSS, Supabase, and PostgreSQL (e.g. FreshMart).
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Automated LLM Security Pipelines:</strong> Construct automated prompt-injection and jailbreak defense evaluation frameworks aligned with MITRE ATLAS.
+                    <strong className="text-white font-medium">AI & Code Review Automation:</strong> Developing intelligent developer tools and automated code review engines in TypeScript (e.g. Ai-Code-Reviewer).
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Local-First AI Execution:</strong> Build desktop AI assistants running offline small language models (Phi-3 Mini via Ollama and Electron).
+                    <strong className="text-white font-medium">Computer Vision & Expression Detection:</strong> Implementing facial micro-expression classification systems using MediaPipe, optical flow, and SVM classifiers.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#FF9838] font-mono mt-0.5">•</span>
                   <span>
-                    <strong className="text-white font-medium">Edge Workload Benchmarking:</strong> Profile inference latency distributions, throughput, and hardware acceleration using Intel OpenVINO.
+                    <strong className="text-white font-medium">AI Workload Benchmarking:</strong> Building Python benchmark frameworks to measure model inference performance, execution times, and throughput.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#FF9838] font-mono mt-0.5">•</span>
+                  <span>
+                    <strong className="text-white font-medium">Systems, Networking & Automation:</strong> Developing vulnerability scanners, real-time vessel telemetry trackers (Ship-Tracker), and Linux bash automation scripts (DiskCleaner).
                   </span>
                 </li>
               </ul>
@@ -152,34 +158,34 @@ export function IntroductionSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">01 / Engineering</span>
-                  <h4 className="text-sm font-medium text-white mb-2">End-to-End Web Products</h4>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">01 / Full-Stack</span>
+                  <h4 className="text-sm font-medium text-white mb-2">Web Application Engineering</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
-                    Full lifecycle product development: relational database schemas, REST/WebSocket APIs, responsive UI, and state management.
+                    Building complete web products with Next.js, Node.js, TypeScript, Supabase, and clean responsive Tailwind CSS frontends.
                   </p>
                 </div>
 
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">02 / AI Systems</span>
-                  <h4 className="text-sm font-medium text-white mb-2">AI & LLM Integration</h4>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">02 / AI Tools</span>
+                  <h4 className="text-sm font-medium text-white mb-2">AI Integrations & Reviewers</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
-                    Connecting LLM APIs, vector search, MCP servers, and vision-AI data extractors into functional business workflows.
+                    Integrating AI APIs, building code analysis and automated review tools, and developing intelligent OS assistant utilities.
                   </p>
                 </div>
 
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">03 / Security</span>
-                  <h4 className="text-sm font-medium text-white mb-2">LLM Red-Teaming & Audits</h4>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">03 / Vision & ML</span>
+                  <h4 className="text-sm font-medium text-white mb-2">Computer Vision Solutions</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
-                    Automated injection attack tests, vulnerability scanners, and safety benchmarking for AI endpoints.
+                    Feature extraction, optical flow pipelines, and classification systems using Python, MediaPipe, and machine learning models.
                   </p>
                 </div>
 
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4">
-                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">04 / Performance</span>
-                  <h4 className="text-sm font-medium text-white mb-2">Inference Optimization</h4>
+                  <span className="font-mono text-[11px] text-[#FF9838] block mb-1">04 / Systems</span>
+                  <h4 className="text-sm font-medium text-white mb-2">Automation & Security Scripts</h4>
                   <p className="text-xs text-white/60 leading-relaxed">
-                    Benchmarking edge AI model throughput, optimizing latency, and profiling CPU/iGPU execution via OpenVINO.
+                    Writing vulnerability scanning scripts, telemetry trackers, and Bash automation tools for Linux system maintenance.
                   </p>
                 </div>
               </div>
