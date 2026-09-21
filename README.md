@@ -30,9 +30,7 @@ portfolio/
 │   ├── footer.tsx                  # Responsive footer with social & verified resume links
 │   ├── interactive-pill-nav.tsx    # Mobile-responsive floating spring pill navigation
 │   ├── introduction-section.tsx    # Connected milestone cards (Who am I, Services, What I do)
-│   ├── navigation.tsx              # Base navigation interfaces
 │   ├── skills-tag-sphere.tsx       # 3D Rotary Skill Globe with touch gestures & DPI scaling
-│   ├── snapshot.tsx                # Architectural scope summary
 │   ├── the-gap-section.tsx         # 3-Pillar bridge (The Model, The Backend, The UI/UX)
 │   └── work.tsx                    # 12 selected engineering repositories & research publications
 ├── data/

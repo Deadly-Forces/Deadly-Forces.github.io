@@ -25,7 +25,6 @@ export interface ProfileData {
   snapshot: {
     whatIAm: string;
     capabilities: string[];
-    purpose: string;
     gapCovered: string;
   };
   projects: Project[];
@@ -66,7 +65,6 @@ export const profile: ProfileData = {
       "Engineer deep learning benchmarking suites profiling hardware inference latency distributions and compute throughput.",
       "Implement systems automation utilities, real-time telemetry streaming platforms, and network vulnerability discovery scanners.",
     ],
-    purpose: "[TODO: one sentence from me]",
     gapCovered:
       "AI features usually stall between the model, the backend and the UI. I cover all three.",
   },
