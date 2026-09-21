@@ -215,7 +215,7 @@ export const profile: ProfileData = {
   bookingUrl: "https://cal.com/nikunj-kaslikar-9kbylp",
   contact: {
     email: "nikunjravikaslikar@gmail.com",
-    resumeUrl: "[TODO: link to resume PDF]",
+    resumeUrl: "https://drive.google.com/file/d/12XDUR9mDtAHh9X9t6OjbQOqNmwA5tKdM/view?usp=drive_link",
     github: "https://github.com/Deadly-Forces",
     linkedin: "https://www.linkedin.com/in/nikunj-kaslikar-89b51928a",
   },

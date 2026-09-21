@@ -41,23 +41,23 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
     ? calLink.startsWith("http")
       ? calLink
       : `https://cal.com/${calLink}`
-    : null;
+    : profile.bookingUrl || null;
 
   return (
     <div
       role="dialog"
       aria-modal="true"
       aria-labelledby="booking-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
     >
       {/* Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity"
       />
 
       {/* Modal Card */}
-      <div className="relative z-10 w-full max-w-2xl rounded-2xl border border-white/20 bg-[#0A0B0E] p-6 sm:p-8 shadow-2xl">
+      <div className="relative z-10 w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-2xl border border-white/20 bg-black p-4 sm:p-8 shadow-2xl">
         <div className="flex items-center justify-between border-b border-white/10 pb-4">
           <div className="flex items-center gap-3">
             <div className="rounded-lg bg-[#E58C36]/10 p-2 text-[#E58C36]">

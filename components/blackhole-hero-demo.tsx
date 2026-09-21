@@ -99,7 +99,7 @@ export default function BlackHoleHeroSectionDemo() {
 
       {/* Foreground Copy Layer */}
       <div
-        className={`relative z-10 flex h-full min-h-[92svh] items-start px-6 pt-14 sm:px-10 md:min-h-[720px] md:items-center md:pt-0 lg:px-20 transition-all ${
+        className={`relative z-10 flex h-full min-h-[100dvh] md:min-h-[720px] items-start px-5 pt-12 sm:px-10 md:items-center md:pt-0 lg:px-20 transition-all ${
           reducedMotion
             ? "duration-200"
             : "duration-700 ease-out"
@@ -110,28 +110,28 @@ export default function BlackHoleHeroSectionDemo() {
         }`}
       >
         <div className="max-w-[34rem]">
-          <h1 className="text-[2.5rem] font-light leading-[1.05] tracking-[-0.03em] text-white sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-light leading-[1.08] tracking-[-0.03em] text-white">
             Light does not
             <br />
             leave here
           </h1>
 
-          <p className="mt-6 max-w-md text-[0.95rem] leading-relaxed text-white/60 md:mt-7">
+          <p className="mt-4 sm:mt-6 max-w-md text-xs sm:text-[0.95rem] leading-relaxed text-white/60 md:mt-7">
             The ring above the shadow is the far side of the disc, bent over
             the top. Nothing put it there but gravity.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3 md:mt-10">
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2.5 sm:gap-3 md:mt-10">
             <button
               onClick={handleStart}
               type="button"
-              className="rounded-full bg-[#F5EFEB] px-6 py-3 text-sm font-medium text-black transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#E58C36] focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
+              className="rounded-full bg-[#F5EFEB] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-black transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#E58C36] focus:ring-offset-2 focus:ring-offset-black cursor-pointer select-none"
             >
               Let&apos;s start
             </button>
             <Link
               href="/home#book"
-              className="rounded-full border border-white/20 px-6 py-3 text-sm text-[#F5EFEB]/90 transition hover:border-[#E58C36]/50 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#E58C36] focus:ring-offset-2 focus:ring-offset-black"
+              className="rounded-full border border-white/20 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm text-[#F5EFEB]/90 transition hover:border-[#E58C36]/50 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#E58C36] focus:ring-offset-2 focus:ring-offset-black select-none"
             >
               Book a call
             </Link>

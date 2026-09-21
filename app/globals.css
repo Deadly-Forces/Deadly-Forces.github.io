@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #0A0B0E;
+  --background: #000000;
   --foreground: #F5EFEB;
 }
 
 html {
-  background-color: #0A0B0E;
+  background-color: #000000;
   color: #F5EFEB;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
 
 body {
-  background-color: #0A0B0E;
+  background-color: #000000;
   color: #F5EFEB;
   min-height: 100vh;
   margin: 0;
@@ -26,15 +26,12 @@ body {
 
 ::selection {
   background-color: #E58C36;
-  color: #0A0B0E;
+  color: #000000;
 }
 
-/* Studio precision hairline grid */
+/* No grid lines / solid pure black */
 .studio-grid {
-  background-image: 
-    linear-gradient(rgba(245, 239, 235, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 239, 235, 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
+  background: transparent;
 }
 
 /* Custom subtle scrollbar */

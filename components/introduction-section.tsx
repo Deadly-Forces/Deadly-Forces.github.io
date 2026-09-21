@@ -3,19 +3,19 @@
 import { motion } from "framer-motion";
 import { profile } from "@/data/profile";
 import { SkillsTagSphere } from "@/components/skills-tag-sphere";
-import { User, Cpu, Briefcase, Sparkles, GitFork, Linkedin, ArrowUpRight } from "lucide-react";
+import { User, Cpu, Briefcase, Sparkles, GitFork, Linkedin, ArrowUpRight, FileText } from "lucide-react";
 
 export function IntroductionSection() {
   return (
-    <section id="introduction" className="relative w-full border-b border-white/10 py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+    <section id="introduction" className="relative w-full border-b border-white/10 py-12 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#E58C36]">
             Introduction
@@ -23,20 +23,20 @@ export function IntroductionSection() {
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-[#F5EFEB] sm:text-4xl">
             Who I Am, What I Build & Services Provided
           </h2>
-          <p className="mt-3 text-sm text-[#A8A29E] max-w-2xl">
+          <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#A8A29E] max-w-2xl">
             Creative technology architecture, machine learning systems, and full-stack engineering milestones.
           </p>
         </motion.div>
 
         {/* 4 Connected Cards Grid */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 sm:gap-8 lg:grid-cols-2">
           {/* Card 1: Who Am I? */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#E58C36]/30 transition-all"
+            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-5 sm:p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#E58C36]/30 transition-all"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -59,7 +59,7 @@ export function IntroductionSection() {
               </p>
             </div>
 
-            <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-4 font-mono text-xs text-[#A8A29E]">
+            <div className="mt-6 flex flex-wrap items-center gap-4 border-t border-white/10 pt-4 font-mono text-xs text-[#A8A29E]">
               <a
                 href={profile.contact.github}
                 target="_blank"
@@ -80,6 +80,16 @@ export function IntroductionSection() {
                 <span>LinkedIn</span>
                 <ArrowUpRight className="h-3 w-3" />
               </a>
+              <a
+                href={profile.contact.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-[#E58C36] text-[#E58C36] transition"
+              >
+                <FileText className="h-3.5 w-3.5" />
+                <span>Resume (PDF)</span>
+                <ArrowUpRight className="h-3 w-3" />
+              </a>
             </div>
           </motion.div>
 
@@ -89,7 +99,7 @@ export function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#E58C36]/30 transition-all"
+            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-5 sm:p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#E58C36]/30 transition-all"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -140,7 +150,7 @@ export function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] lg:col-span-2"
+            className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#111318]/90 p-5 sm:p-7 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.5)] lg:col-span-2"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -150,34 +160,34 @@ export function IntroductionSection() {
                 <h3 className="text-lg font-light text-[#F5EFEB]">What service I can provide?</h3>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-4">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3.5 sm:p-4 hover:border-[#E58C36]/40 transition">
                   <span className="font-mono text-[11px] text-[#E58C36] block mb-1">Full-Stack</span>
-                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">Web Application Engineering</h4>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-1.5 sm:mb-2">Web Application Engineering</h4>
                   <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Building complete web products with Next.js, Node.js, TypeScript, Supabase, and responsive Tailwind CSS frontends.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3.5 sm:p-4 hover:border-[#E58C36]/40 transition">
                   <span className="font-mono text-[11px] text-[#E58C36] block mb-1">AI Tools</span>
-                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">AI Integrations & Reviewers</h4>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-1.5 sm:mb-2">AI Integrations & Reviewers</h4>
                   <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Integrating AI APIs, building code analysis and automated review tools, and developing intelligent OS assistant utilities.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3.5 sm:p-4 hover:border-[#E58C36]/40 transition">
                   <span className="font-mono text-[11px] text-[#E58C36] block mb-1">Vision & ML</span>
-                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">Computer Vision Solutions</h4>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-1.5 sm:mb-2">Computer Vision Solutions</h4>
                   <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Feature extraction, optical flow pipelines, and classification systems using Python, MediaPipe, and machine learning models.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-[#E58C36]/40 transition">
+                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3.5 sm:p-4 hover:border-[#E58C36]/40 transition">
                   <span className="font-mono text-[11px] text-[#E58C36] block mb-1">Systems</span>
-                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-2">Automation & Security Scripts</h4>
+                  <h4 className="text-sm font-medium text-[#F5EFEB] mb-1.5 sm:mb-2">Automation & Security Scripts</h4>
                   <p className="text-xs text-[#A8A29E] leading-relaxed">
                     Writing vulnerability scanning scripts, telemetry trackers, and Bash automation tools for Linux system maintenance.
                   </p>
@@ -193,7 +203,7 @@ export function IntroductionSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mt-14"
+          className="mt-10 sm:mt-14"
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="rounded-lg bg-[#E58C36]/10 p-2 text-[#E58C36]">

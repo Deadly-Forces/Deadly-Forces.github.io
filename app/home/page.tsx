@@ -91,18 +91,14 @@ export default function HomePage() {
 
   return (
     <div
-      className={`min-h-screen bg-[#0A0B0E] text-[#F5EFEB] selection:bg-[#E58C36] selection:text-black transition-opacity ${
+      className={`min-h-screen bg-black text-[#F5EFEB] selection:bg-[#E58C36] selection:text-black transition-opacity ${
         reducedMotion ? "duration-200" : "duration-700 ease-out"
       } ${mounted ? "opacity-100" : "opacity-0"}`}
     >
-      {/* Studio ambient warmth & precision hairline grid */}
+      {/* Studio ambient warmth glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(229,140,54,0.12),rgba(10,11,14,0))]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 studio-grid opacity-30"
+        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(229,140,54,0.08),rgba(0,0,0,0))]"
       />
 
       {/* Floating Pill Navigation */}
@@ -113,7 +109,7 @@ export default function HomePage() {
       />
 
       {/* Connected Sliding Panes Container */}
-      <div className="relative z-10 pt-20 flex flex-col min-h-screen">
+      <div className="relative z-10 pt-16 sm:pt-20 flex flex-col min-h-screen">
         <main className="flex-1 w-full overflow-hidden">
           <AnimatePresence mode="wait" custom={slideDirection}>
             <motion.div
@@ -133,25 +129,25 @@ export default function HomePage() {
           </AnimatePresence>
 
           {/* Connected Pane Navigation Footer Bar */}
-          <div className="border-t border-white/10 bg-[#0A0B0E]/90 py-6 px-6 sm:px-8 backdrop-blur-md">
-            <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <div className="border-t border-white/10 bg-black/90 py-4 sm:py-6 px-4 sm:px-8 backdrop-blur-md">
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-2">
               <div>
                 {currentIndex > 0 ? (
                   <button
                     onClick={goToPrevPane}
                     type="button"
-                    className="flex items-center gap-2 text-xs font-mono text-[#A8A29E] hover:text-[#E58C36] transition cursor-pointer"
+                    className="flex items-center gap-1.5 sm:gap-2 text-xs font-mono text-[#A8A29E] hover:text-[#E58C36] transition cursor-pointer p-1.5 sm:p-0 rounded"
                   >
-                    <ArrowLeft className="h-4 w-4" />
-                    <span>Previous: {PANES[currentIndex - 1].title}</span>
+                    <ArrowLeft className="h-4 w-4 shrink-0" />
+                    <span>Previous<span className="hidden sm:inline">: {PANES[currentIndex - 1].title}</span></span>
                   </button>
                 ) : (
-                  <span className="text-xs font-mono text-white/20">Beginning of Tour</span>
+                  <span className="text-xs font-mono text-white/20">Start</span>
                 )}
               </div>
 
               {/* Step indicator */}
-              <div className="hidden sm:flex items-center gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-2">
                 {PANES.map((pane, idx) => (
                   <button
                     key={pane.id}
@@ -159,7 +155,7 @@ export default function HomePage() {
                     aria-label={`Go to ${pane.title}`}
                     className={`h-1.5 rounded-full transition-all cursor-pointer ${
                       idx === currentIndex
-                        ? "w-8 bg-[#E58C36]"
+                        ? "w-6 sm:w-8 bg-[#E58C36]"
                         : "w-2 bg-white/20 hover:bg-white/40"
                     }`}
                   />
@@ -171,19 +167,19 @@ export default function HomePage() {
                   <button
                     onClick={goToNextPane}
                     type="button"
-                    className="flex items-center gap-2 text-xs font-mono text-[#A8A29E] hover:text-[#E58C36] transition cursor-pointer"
+                    className="flex items-center gap-1.5 sm:gap-2 text-xs font-mono text-[#A8A29E] hover:text-[#E58C36] transition cursor-pointer p-1.5 sm:p-0 rounded"
                   >
-                    <span>Next: {PANES[currentIndex + 1].title}</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <span>Next<span className="hidden sm:inline">: {PANES[currentIndex + 1].title}</span></span>
+                    <ArrowRight className="h-4 w-4 shrink-0" />
                   </button>
                 ) : (
                   <button
                     onClick={() => handleSelectTab("introduction")}
                     type="button"
-                    className="flex items-center gap-2 text-xs font-mono text-[#E58C36] hover:underline cursor-pointer"
+                    className="flex items-center gap-1.5 sm:gap-2 text-xs font-mono text-[#E58C36] hover:underline cursor-pointer p-1.5 sm:p-0"
                   >
-                    <span>Back to Introduction</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <span>Back to Start</span>
+                    <ArrowRight className="h-4 w-4 shrink-0" />
                   </button>
                 )}
               </div>

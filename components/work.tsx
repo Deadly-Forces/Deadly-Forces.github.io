@@ -13,15 +13,15 @@ export function Work() {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <section id="work" className="relative w-full border-b border-white/10 py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+    <section id="work" className="relative w-full border-b border-white/10 py-12 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[#E58C36]">
             Work & Publications
@@ -29,13 +29,13 @@ export function Work() {
           <h2 className="mt-2 text-2xl font-light tracking-[-0.02em] text-[#F5EFEB] sm:text-4xl">
             Selected Engineering & Research Projects
           </h2>
-          <p className="mt-3 text-sm text-[#A8A29E] max-w-2xl">
-            12 production systems and peer-reviewed research spanning full-stack web platforms, computer vision, local SLM inference, security scanners, and robotics.
+          <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#A8A29E] max-w-2xl">
+            12 engineering systems and peer-reviewed research spanning full-stack web platforms, computer vision pipelines, edge benchmarking, security scanners, and robotics.
           </p>
         </motion.div>
 
         {/* Featured Projects Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((project, i) => (
             <FeaturedCard key={project.id} project={project} index={i} />
           ))}
@@ -43,8 +43,8 @@ export function Work() {
 
         {/* Compact Projects List */}
         {compactProjects.length > 0 && (
-          <div className="mt-16">
-            <h3 className="mb-6 font-mono text-xs uppercase tracking-wider text-[#A8A29E]">
+          <div className="mt-12 sm:mt-16">
+            <h3 className="mb-4 sm:mb-6 font-mono text-xs uppercase tracking-wider text-[#A8A29E]">
               Additional Engineering & Research Repositories
             </h3>
             <div className="divide-y divide-white/10 border-y border-white/10">
@@ -68,7 +68,7 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.06 }}
-      className={`group relative flex flex-col justify-between rounded-2xl border p-6 transition-all duration-300 backdrop-blur-md ${
+      className={`group relative flex flex-col justify-between rounded-2xl border p-5 sm:p-6 transition-all duration-300 backdrop-blur-md ${
         isPaper
           ? "border-[#E58C36]/30 bg-[#141210]/90 hover:border-[#E58C36]/60 hover:bg-[#181512]/95 shadow-[0_12px_32px_rgba(229,140,54,0.06)]"
           : "border-white/10 bg-[#111318]/90 hover:border-[#E58C36]/40 hover:bg-[#141720]/95 shadow-[0_12px_32px_rgba(0,0,0,0.5)]"
